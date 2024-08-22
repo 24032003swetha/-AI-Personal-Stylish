@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products </title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="../static/images/logo-white.png">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('products') }}">Products</a></li>
+                    
+                </ul>
+            </nav>
+                <img src="../static/images/cart.png" width="30px" height="30px">
+                <img src="../static/images/menu.png" class="menu-icon"
+                onclick="menutoggle()">
+            </div> 
+    </div>   
+
+    <!-- --------------------- single product detILS----------- -->
+
+    <div class="small-container single-product">
+        <div class="row">
+            <div class="col-2">
+                <img src="../static/images/gallery-19.jpg" width="100%" id="ProductImg" >
+
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="../static/images/gallery-19.jpg" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="../static/images/gallery-2.jpg" width="100%" class="small-img">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-2">
+                
+                <h1> Black T shirt by HRX</h1>
+                
+                <a href="{{url_for('tryNow')}}" class="btn">Try Now</a>
+
+                
+                <br>
+            
+            </div>
+        </div>
+    </div>
+
+<!-- -------------Title------------- -->
+<div class="small-container">
+    <div class="row row-2">
+        <h2>Related Products</h2>
+    </div>
+
+</div>
+
+<!-- -------------Product----------- -->
+    <div class="small-container">
+
+        <div class="row">
+            <div class="col-4">
+                <a href="{{ url_for('productdetails2') }}"><img src="../static/images/product-3.jpg"></a>
+                <a href="{{ url_for('productdetails2') }}"><h4>Red Printed T-Shirt</h4></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+              
+            </div>
+            <div class="col-4">
+                <a href="{{ url_for('productdetails3') }}"><img src="../static/images/product-4.jpg"></a>
+                <a href="{{ url_for('productdetails3') }}"><h4>Navy Blue T-Shirt</h4></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+               
+            </div>
+            <div class="col-4">
+                <a href="{{ url_for('productdetails4') }}"><img src="../static/images/product-5.jpg"></a>
+                <a href="{{ url_for('productdetails4') }}"><h4>Green T-Shirt</h4></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+               
+            </div>
+            <div class="col-4">
+                <a href="{{ url_for('productdetails5') }}"><img src="../static/images/product-6.jpg"></a>
+                <a href="{{ url_for('productdetails5') }}"><h4>Black T-Shirt</h4></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+              
+            </div>
+        </div>
+
+        
+    </div>
+
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight == "200px"
+        }
+        else
+        {
+            MenuItems.style.maxHeight == "0px"
+        }
+    }
+</script>
+
+
+<!-- -----------------js for product gallery------------------ -->
+
+<script>
+var ProductImg = document.getElementById("ProductImg");
+var SmallImg = document.getElementsByClassName("small-img");
+
+  SmallImg[0].onclick = function()
+  {
+    ProductImg.src = SmallImg[0].src;
+  }
+  SmallImg[1].onclick = function()
+  {
+    ProductImg.src = SmallImg[1].src;
+  }
+  SmallImg[2].onclick = function()
+  {
+    ProductImg.src = SmallImg[2].src;
+  }
+  SmallImg[3].onclick = function()
+  {
+    ProductImg.src = SmallImg[3].src;
+  }
+
+</script>
+</body>
+</html>

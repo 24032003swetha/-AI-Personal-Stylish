@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Dressing Room</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="{{ url_for('index') }}"><img src="../static/images/logo-white.png"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('products') }}">Products</a></li>
+                </ul>
+            </nav>
+                <img src="../static/images/cart.png" width="30px" height="30px">
+                <img src="../static/images/menu.png" class="menu-icon" 
+                onclick="menutoggle()">
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1><br>A New Style!</h1>
+                    <h3><p>Bringing the real world clothes experience online.</p></h3>
+                    
+                </div>
+                <div class="col-2">
+                    <img src="../static/images/image1.png">
+                </div>
+         </div>
+        </div>
+    </div>
+
+    <!----------------- featured categories ----------------->
+    <div class="categories">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="../static/images/category-1.jpg">
+                </div>
+                <div class="col-3">
+                    <img src="../static/images/category-2.jpg">
+                </div>
+                <div class="col-3">
+                    <img src="../static/images/category-3.jpg">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!----------------- featured products ----------------->
+    <div class="small-container">
+        <h2 class="title">Featured Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="{{ url_for('productdetails') }}"><img src="../static/images/product-1.jpg"></a>
+                <a href="{{ url_for('productdetails') }}"><h4>Red Printed T-Shirt</h4></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                
+            </div>
+            <div class="col-4">
+                <a href="{{ url_for('productdetails1') }}"><img src="../static/images/product-2.jpg"></a>
+                <a href="{{ url_for('productdetails1') }}"><h4>Blue tshirt for men</h4></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+              
+            </div>
+            <div class="col-4">
+                <a href="{{ url_for('productdetails2') }}"><img src="../static/images/product-3.jpg"></a>
+                <a href="{{ url_for('productdetails2') }}"><h4>sporty tshirt for men</h4></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            
+            </div>
+            <div class="col-4">
+                <a href="{{ url_for('productdetails3') }}"><img src="../static/images/product-4.jpg"></a>
+                <a href="{{ url_for('productdetails3') }}"><h4>sporty tshirt for men</h4></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+             
+            </div>
+        </div>
+        <h2 class="title">Latest Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="{{ url_for('productdetails4') }}"><img src="../static/images/product-5.jpg"></a>
+                <a href="{{ url_for('productdetails4') }}"><h4>Green tshirt for men</h4></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+              
+            </div>
+            <div class="col-4">
+                <a href="{{ url_for('productdetails5') }}"><img src="../static/images/product-6.jpg"></a>
+                <a href="{{ url_for('productdetails5') }}"><h4>Black shirt for men</h4></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+              
+            </div>
+            <div class="col-4">
+                <a href="{{ url_for('productdetails6') }}"><img src="../static/images/product-7.jpg"></a>
+                <a href="{{ url_for('productdetails6') }}"><h4>Black T-shirt for men</h4></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+          
+            </div>
+            <div class="col-4">
+                <a href="{{ url_for('productdetails7') }}"><img src="../static/images/product-8.jpg"></a>
+                <a href="{{ url_for('productdetails7') }}"><h4>sporty tshirt for men</h4></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+        
+            </div>
+        </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- --------- testimonial ------->
+
+</script>
+</body>
+</html>
